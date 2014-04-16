@@ -1,0 +1,23 @@
+/**
+* -------------------------------------------------------------------------------------------------------
+* Main Styles
+*--------------------------------------------------------------------------------------------------------
+**/
+
+.l-list-unstyled {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.l-container {
+	@include grid-row();
+}
+
+.l-main-left-col {
+	@include grid-column(8);
+
+}
+
+.l-main-right-col {
+	@include grid-column(4, $last-column:true, $collapse:false);
+}

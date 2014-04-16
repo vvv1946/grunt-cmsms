@@ -1,0 +1,4 @@
+@mixin em-rem-calc($property: 'padding', $value: $base-font-size) {
+	#{$property}: em-calc($value);
+	#{$property}: rem-calc($value);
+}

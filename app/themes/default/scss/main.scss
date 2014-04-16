@@ -1,0 +1,52 @@
+/**
+* --------------------------------------------------------------------------------------------------
+* main.scss
+*
+* Simple CMS Made Simple theme framework
+*
+* Author: Ben Bonora
+* Website: www.bennyvbonora.com
+*
+* --------------------------------------------------------------------------------------------------
+**/
+
+/* Compass */
+@import "compass";
+
+/* Utilities */
+@import "utilities/functions";
+@import "utilities/settings";
+@import "mixins/misc";
+@import "utilities/utilities";
+
+
+
+/* Grid */
+@import "mixins/grid";
+
+/* Base */
+@import "base/normalize";
+@import "base/base";
+@import "base/ie8.scss";
+
+/* Fonts */
+// @import "fonts/font-name";
+@import "font-awesome";
+
+/* Sprites */
+@import "spr/*.png";
+
+/* Layout */
+@import "layout/nav";
+@import "layout/header";
+@import "layout/main";
+@import "layout/footer";
+
+/* Modules */
+@import "modules/btn";
+@import "modules/dividers";
+@import "modules/forms";
+@import "modules/misc";
+
+/* Theme */
+@import "theme/theme";

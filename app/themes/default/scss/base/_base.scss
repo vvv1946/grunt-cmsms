@@ -1,0 +1,36 @@
+/**
+* -------------------------------------------------------------------------------------------------------
+* Base Styles
+*--------------------------------------------------------------------------------------------------------
+**/
+
+html, body {
+  height: 100%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+p {
+  margin-bottom: rem-calc($baseline);
+  
+  a {
+    text-decoration: none;
+  }
+}
+
+blockquote {
+  margin: 0;
+  font-style: italic;
+}
+
+cite {
+  font-size: rem-calc(12);
+  font-style: normal;
+  
+  &:bofore {
+    content: "-";
+  }
+}
+

@@ -1,0 +1,38 @@
+/**
+* -------------------------------------------------------------------------------------------------------
+* Utilities
+*--------------------------------------------------------------------------------------------------------
+**/
+.text-left {
+	text-align: left !important;
+}
+.text-right {
+	text-align: right !important;
+}
+.text-center {
+	text-align: center !important;
+}
+.align-left {
+	@include float-left;
+}
+.align-right {
+	@include float-right;
+}
+.clearfix {
+	@include clearfix;
+}
+#map_canvas,
+.map_canvas {
+	img,
+	embed,
+	object { max-width: none !important;}
+}
+
+.antialiased { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+.panel {
+	background-color: #ccc;
+	padding-left: rem-calc(8);
+	padding-right: rem-calc(8);
+	border: 1px solid darken(#ccc, 10%);
+}

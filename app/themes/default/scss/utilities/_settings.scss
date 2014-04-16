@@ -1,0 +1,55 @@
+/**
+* -------------------------------------------------------------------------------------------------------
+* Site Settings
+*--------------------------------------------------------------------------------------------------------
+**/
+
+/* Typography */
+$base-font-size: 16px;
+$font-1: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-2: Georgia, serif;
+$baseline: $base-font-size * 1.5;
+
+/* font awesome settings */
+$fa-font-path: "../fonts/font-awesome";
+
+/* Colors */
+$color-link: #4183c4;
+$color-link-hover: #333;
+
+$color-body-background: #fff;
+
+$color-text: #333;
+$color-light-text: #777;
+$color-dark-text: $color-link-hover;
+
+$color-hr: #eee;
+
+$color-h1: $color-text;
+$color-h2: $color-text;
+
+$color-validation-error: red;
+$color-validation-success: green;
+
+/* Positioning */
+$margin-multiplier: 2;
+$general-margin: $baseline * $margin-multiplier;
+
+/* Grid Settings */
+$row-width: rem-calc(1000) !default;
+$row-width-ie8: em-calc(1000) !default;
+$column-gutter: rem-calc(20) !default;
+$column-gutter-ie8: em-calc(20) !default;
+$total-columns: 12 !default;
+
+$text-direction: ltr !default;
+$default-float: left !default;
+$opposite-direction: right !default;
+
+@if $text-direction == ltr {
+  $default-float: left;
+  $opposite-direction: right;
+} @else {
+  $default-float: right;
+  $opposite-direction: left;
+}

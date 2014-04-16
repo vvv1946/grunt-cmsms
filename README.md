@@ -1,0 +1,1 @@
+A Grunt template for creating CMS Made Simple themes
