@@ -11,7 +11,8 @@
 		"db_name": 		"db_name",
 		"db_username": 	"username",
 		"db_password": 	"password",
-		"sitename": 	"Grunt CMSMS"
+		"sitename": 	"Grunt CMSMS",
+		"theme_dir":	"default"
 
 	},
 	
