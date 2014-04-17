@@ -10,7 +10,7 @@ class config {
 		if( !empty($parts['path']) ) {
 			$path = dirname($parts['path']);
 			
-			while(endswith($path, DIRECTORY_SEPARATOR)) {
+			while(endswith($path, DS)) {
 				$path = substr($path,0,strlen($path)-1);
 			}
 			if(($pos = strpos($path,'/index.php')) !== FALSE ) {
@@ -22,7 +22,7 @@ class config {
 		$config['root_url'] = $root_url;
 		$config['root_path'] = $_SERVER['DOCUMENT_ROOT']; 
 		$dirname = $dirname = dirname(dirname(dirname(__FILE__)));
-		$config_file_path = $dirname.DIRECTORY_SEPARATOR.'theme-config.json';
+		$config_file_path = $dirname.DS.'theme-config.json';
 		
 		$config_file = array();
 		if(file_exists($config_file_path)) {
