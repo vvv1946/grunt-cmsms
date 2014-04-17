@@ -9,7 +9,7 @@ if(!empty($params[0])) {
 	$page = $params[1];
 } else {
 	$page = isset($_GET['page']) ? $_GET['page'] : 'home';
-	$theme = isset($_GET['theme']) ? $_GET['theme'] : 'default';
+	$theme = isset($_GET['theme']) ? $_GET['theme'] : false;
 }
 
 
@@ -17,8 +17,13 @@ if(!empty($params[0])) {
 
 // import classes and libs
 require_once 'include.php';
-
 $config = cmsms()->GetConfig();
+
+// Check if theme is false
+if($theme === false) {
+	 $theme = $config['theme_dir'];
+}
+
 $manifest = $config['root_path'].DS.'themes'.DS.$theme.DS.'_pages'.DS.$page.DS.'page.php';
 
 $page_config = array();
