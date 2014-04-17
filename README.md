@@ -8,3 +8,6 @@ All of the theme files are in `/app/themes/default/` If you decide to rename the
 - ./bower.json
 - app/themes/YOUR-THEME-NAME/_includes/js.tpl
 - app/themes/YOUR-THEME-NAME/_includes/js.tpl
+- app/themes/YOUR-THEME-NAME/_layouts/default.tpl
+
+After you have changed all directory name settings and file paths, open up the terminal or command prompt and  `cd` into the project folder example: `cd grunt-cmsms`. Once you are in the project folder run `npm install`. This will download all the required node packages. Next you will need to download all the bower packages by running the following command `bower install`.
