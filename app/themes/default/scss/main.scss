@@ -23,10 +23,12 @@
 
 /* Grid */
 @import "mixins/grid";
+@import "mixins/flex-video";
 
 /* Base */
 @import "base/normalize";
 @import "base/base";
+@import "base/typography";
 @import "base/ie8.scss";
 
 /* Fonts */
@@ -47,6 +49,3 @@
 @import "modules/dividers";
 @import "modules/forms";
 @import "modules/misc";
-
-/* Theme */
-@import "theme/theme";
