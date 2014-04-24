@@ -1,0 +1,71 @@
+/**
+* -------------------------------------------------------------------------------------------------------
+* Theme Styles
+*--------------------------------------------------------------------------------------------------------
+**/
+
+/* Typography */
+body {
+  color: $color-text;
+  font: #{$base-font-size}/#{$baseline} $font-1;
+}
+
+a {
+  color: $color-link;
+  
+  &:hover {
+    color: $color-link-hover;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: rem-calc($baseline);
+  color: $color-dark-text;
+  font-family: $font-2;
+  font-weight: normal;
+  line-height: 1;
+}
+
+h1 {
+
+  font-size: rem-calc(54px);
+  font-weight: bold;
+}
+
+h2 {
+  font-size: rem-calc(36px);
+}
+
+h3 {
+  font-size: rem-calc(24px);
+  color: $color-light-text;
+}
+h4 {
+  font-size: rem-calc(16px);
+  font-weight: bold;
+}
+h5 {
+  font-size: rem-calc(14px);
+  font-family: $font-1;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+h6 {
+  font-family: $font-1;
+  font-size: rem-calc(7px);
+}
+
+blockquote cite {
+  color: $color-light-text;
+}
+
+/* Layout Related */
+.t-margin {
+  margin-bottom: $general-margin;
+}
+
