@@ -44,7 +44,8 @@ module.exports = function(grunt) {
 						'<%= paths.tmp %>',
 						'.sass-cache',
 						'<%= paths.dist %>/*',
-						'!<%= paths.dist %>/.git*'
+						'!<%= paths.dist %>/.git*',
+						'!<%= paths.dist %>/themes/sftp-config.json'
 					]
 				}]
 			},
@@ -242,6 +243,7 @@ module.exports = function(grunt) {
 			],
 			dist: [
 				'compass',
+				'pixrem:app',
 				'copy:css',
 				'copy:fonts',
 				'imagemin',
@@ -279,4 +281,7 @@ module.exports = function(grunt) {
 		'rev',
 		'usemin'
 	]);
+
+	grunt.registerTask('defulat',['build']);
+
 } // eo module.exports
