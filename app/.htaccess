@@ -233,8 +233,21 @@ Header set Cache-Control "no-transform"
 </IfModule>
 
 
+# ----------------------------------------------------------------------
+# Internet Explorer
+# ----------------------------------------------------------------------
 
+# Force IE to render pages in the highest available mode in the various
+# cases when it may not: http://hsivonen.iki.fi/doctype/ie-mode.pdf.
 
+<IfModule mod_headers.c>
+    Header set X-UA-Compatible "IE=edge"
+    # `mod_headers` can't match based on the content-type, however, we only
+    # want to send this header for HTML pages and not for the other resources
+    <FilesMatch "\.(appcache|crx|css|cur|eot|gif|htc|ico|jpe?g|js|m4a|m4v|manifest|mp4|oex|oga|ogg|ogv|opus|otf|pdf|png|safariextz|svgz?|ttf|vcf|webapp|webm|webp|woff|xml|xpi)$">
+        Header unset X-UA-Compatible
+    </FilesMatch>
+</IfModule>
 
 # ----------------------------------------------------------------------
 # ETag removal
@@ -301,4 +314,23 @@ AddCharset utf-8 .atom .css .js .json .rss .vtt .xml
 # Increase cookie security
 <IfModule mod_php5.c>
   php_value session.cookie_httponly true
+</IfModule>
+
+# ----------------------------------------------------------------------
+# Force URL's www.example.com -> example.com
+# ----------------------------------------------------------------------
+<IfModule mod_rewrite.c>
+    RewriteCond %{HTTPS} !=on
+    RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+    RewriteRule ^ http://%1%{REQUEST_URI} [R=301,L]
+</IfModule>
+
+# ----------------------------------------------------------------------
+# Pretty URL'S for CMS Made Simple
+# ----------------------------------------------------------------------
+<IfModule mod_rewrite.c>
+  RewriteEngine on
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^(.+)$ index.php?page=$1 [QSA]
 </IfModule>
