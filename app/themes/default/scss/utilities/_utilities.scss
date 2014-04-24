@@ -36,3 +36,9 @@
 	padding-right: rem-calc(8);
 	border: 1px solid darken(#ccc, 10%);
 }
+
+@media #{$small-only} {
+	.video-flex-box {
+		@include flex-video-container;
+	}
+}
